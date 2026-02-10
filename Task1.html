@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+</head>
+<body>
+    <h2 id="head">heading</h2>
+    <p id="para">this is first para</p>
+
+    <button onclick="changecontent()">change content</button>
+    <script>
+        function changecontent() {
+            //change text using getElementbyId
+            document.getElementById("head").innerHTML="head is changed";
+            //select element and change style
+            let p = document.getElementById("para")
+            //change paragraph content
+            p.innerHTML="para text changed using js";
+            // change color and font size
+            p.style.color ="red";
+            p.style.fontsize ="20px";
+        }
+    </script>
+</body>
+</html>

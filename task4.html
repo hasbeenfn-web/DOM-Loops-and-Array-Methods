@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 4</title>
+</head>
+<body>
+
+  <h2>Array Advanced Methods</h2>
+
+  <label>Enter a number:</label>
+  <input type="text" id="num"><br><br>
+
+  <button onclick="arrayOperations()">Check</button>
+
+  <script>
+    function arrayOperations() {
+
+      let arr = [10, 20, 30, 40, 50];
+
+      let userNum = Number(document.getElementById("num").value);
+
+      // 1. Sum using reduce
+      let sum = arr.reduce((total, num) => total + num, 0);
+
+      // 2. Find value (returns value or undefined)
+      let found = arr.find(num => num === userNum);
+
+      // 3. Includes check (true / false)
+      let available = arr.includes(userNum);
+
+      alert(
+        "Sum using reduce: " + sum +
+        "\nFound value: " + found +
+        "\nAvailable: " + available
+      );
+    }
+  </script>
+
+</body>
+</html>
